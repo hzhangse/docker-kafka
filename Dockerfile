@@ -36,7 +36,7 @@ RUN tar -zx -C /kafka --strip-components=1 -f ${KAFKA_RELEASE_ARCHIVE} && \
 
 ADD config /kafka/config
 ADD start.sh /start.sh
-
+RUN chmod a+x /start.sh 
 
 # 添加测试用户admin，密码admin，并且将此用户添加到sudoers里  
 RUN useradd admin  
