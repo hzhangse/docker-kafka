@@ -1,8 +1,7 @@
 #!/bin/bash
 sudo docker run -d \
 --name kafka1 \
---volume /home/ryan/work/tools/docker/kafka/docker-kafka-master/data1:/data --volume /home/ryan/work/tools/docker/kafka/docker-kafka-master/logs1:/logs \
- --publish 9092:9092 --publish 7203:7203 \
+--publish 9092:9092 --publish 7203:7203 \
 --env KAFKA_ADVERTISED_HOST_NAME=172.19.0.24 \
 -e KAFKA_BROKER_ID=0 \
 -e KAFKA_DEFAULT_REPLICATION_FACTOR=2 \
@@ -12,6 +11,7 @@ sudo docker run -d \
 -e ZOOKEEPER_CONNECTION_STRING=172.19.0.21:2181,172.19.0.22:2181,172.19.0.23:2181 \
 --net shadownet --ip 172.19.0.24   registry.cn-hangzhou.aliyuncs.com/rainbow954/kafka:latest
 #--restart=always 
+#--volume /home/ryan/work/tools/docker/kafka/docker-kafka-master/data1:/data --volume /home/ryan/work/tools/docker/kafka/docker-kafka-master/logs1:/logs \
 
 sudo docker run -d \
 --name kafka2 \
