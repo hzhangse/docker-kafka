@@ -10,7 +10,7 @@ sudo docker run -d \
 -e KAFKA_DELETE_TOPIC_ENABLE=true \
 -e KAFKA_NUM_PARTITIONS=3 \
 -e ZOOKEEPER_CONNECTION_STRING=172.19.0.21:2181,172.19.0.22:2181,172.19.0.23:2181 \
---net shadownet --ip 172.19.0.24   rainbow954/kafka:v1 
+--net shadownet --ip 172.19.0.24   registry.cn-hangzhou.aliyuncs.com/rainbow954/kafka:latest
 #--restart=always 
 
 sudo docker run -d \
@@ -22,7 +22,7 @@ sudo docker run -d \
 -e KAFKA_DELETE_TOPIC_ENABLE=true \
 -e KAFKA_NUM_PARTITIONS=3 \
 -e ZOOKEEPER_CONNECTION_STRING=172.19.0.21:2181,172.19.0.22:2181,172.19.0.23:2181 \
---net shadownet --ip 172.19.0.25   rainbow954/kafka:v1 
+--net shadownet --ip 172.19.0.25   registry.cn-hangzhou.aliyuncs.com/rainbow954/kafka:latest
 
 
 sudo docker run -d \
@@ -34,6 +34,6 @@ sudo docker run -d \
 -e KAFKA_DELETE_TOPIC_ENABLE=true \
 -e KAFKA_NUM_PARTITIONS=3 \
 -e ZOOKEEPER_CONNECTION_STRING=172.19.0.21:2181,172.19.0.22:2181,172.19.0.23:2181 \
---net shadownet --ip 172.19.0.26  rainbow954/kafka:v1 
+--net shadownet --ip 172.19.0.26  registry.cn-hangzhou.aliyuncs.com/rainbow954/kafka:latest
 
 
